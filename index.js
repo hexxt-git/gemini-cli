@@ -6,24 +6,7 @@ const program = new Command();
 
 program
     .option("-k, --key <key>", "API key")
-    .command("help")
-    .description("Display help information about how the CLI works")
-    .action(() => {
-        console.log(`
-            Usage: npx gemini-cli [options]
-
-            Options:
-              -k, --key <key>  API key
-
-            Commands:
-              help             Display help information about how the CLI works
-
-            Description:
-              This CLI allows you to interact with the Google Generative AI model. 
-              You need to provide an API key using the -k or --key option.
-        `);
-        process.exit(0);
-    });
+    .description("Set your API key and chat with gemini 1.5 pro assistant from terminal");
 
 program.parse(process.argv);
 
